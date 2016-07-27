@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hello Website — blog</title>
+    <title>Android Studio stuck on “Gradle: resolve dependancies&#39; — blog</title>
     <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
     <link rel="dns-prefetch" href="//cdn.mathjax.org">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
@@ -75,20 +75,45 @@
           <div class="page">
             
   
-  <div class="blog-post">
+  <div class="post-header mb2">
   
-    <h2>Hello Website</h2>
+    <h1>Android Studio stuck on “Gradle: resolve dependancies&#39;</h1>
   
-  <p class="meta">
+  <span class="post-meta">
     written by
     
       Eswar Malla
     
-    on 2016-07-16
-  </p>
-  <p>This is an example blog post.  Not much here but that's not the point :)</p>
-
+    on 2016-04-08
+    </span>
   </div>
+  <article class="post-content">
+      <ul>
+<li><p>Check all the dependencies, whether they are valid or not.</p>
+</li>
+<li><p>Or for a temporary fix, try offline mode.</p>
+</li>
+</ul>
+<blockquote><p>To enable this setting go to:
+Preferences -&gt; Gradle
+In the right side options go down to "Global Gradle Settings" and check the "Offline work" box.</p>
+</blockquote>
+<ul>
+<li><p>Build from the command line to know the exact source of the problem</p>
+<p>In windows</p>
+<blockquote><p>gradlew.bat assembleDebug</p>
+</blockquote>
+<p>In linux</p>
+</li>
+</ul>
+<blockquote><p>chmod +x gradlew
+./gradlew assembleDebug</p>
+</blockquote>
+<ul>
+<li>If nothing works, You can also try to delete all contents of folder C:\Users\<Username>.gradle</li>
+</ul>
+
+  </article>
 
 
           </div>
@@ -99,8 +124,7 @@
     <div class="measure">
       <small>
           &copy; Copyright 2016 by Eswar Malla.
-        Theme <a href="https://github.com/johnotander/pixyll">Piktor</a>, fork of <a href="https://github.com/johnotander/pixyll">Pixyll</a> &lt;3 by <a href="http://johnotander.com">John Otander</a> 
-        &lt;/&gt; available on .
+        Theme <a href="https://github.com/eswarm/piktor">Piktor</a> by <a href="http://eswarm.in">Eswar Malla</a>, fork of <a href="https://github.com/johnotander/pixyll">Pixyll</a> by <a href="http://johnotander.com">John Otander</a>
       </small>
     </div>
   </footer>

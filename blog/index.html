@@ -76,128 +76,126 @@
             
   
     
-  <div class="blog-post">
+  <div class="post-header mb2">
   
-    <h2><a href="../blog/first-post/">Hello Website</a></h2>
+    <a class="post-link" href="../blog/somabot/"><h3 class="h1 post-title">Somabot<h3></a>
   
-  <p class="meta">
+  <span class="post-meta">
     written by
     
       Eswar Malla
     
-    on 2016-07-16
-  </p>
-  <p>This is an example blog post.  Not much here but that's not the point :)</p>
-
+    on 2016-05-04
+    </span>
   </div>
+  <article class="post-content">
+      <p><a href="http://www.youtube.com/watch?feature=player_embedded&v=SUPC4OL6UD4" target="_blank"><img src="http://img.youtube.com/vi/SUPC4OL6UD4/0.jpg" alt="Somabot" width="480" height="360" border="10" /></a></p>
+<p>The hardware interfacing is based on libmraa. You can use this on beaglebone black, Raspberry PI or the intel edison/galileo.</p>
+<p>Just select the ingredients in the settings, and the right recipes are populated for generating your cocktails automatically.</p>
+<p>The control software is a webserver you can access from any browser. Built to be responsive, so you can use it either on your mobile or desktop.</p>
+<p><img src="https://github.com/eswarm/somabot/blob/master/screens/home.png" alt="Home" width="400">
+<img src="https://github.com/eswarm/somabot/blob/master/screens/home2.png" alt="Home" width="400">
+<img src="https://github.com/eswarm/somabot/blob/master/screens/settings.png" alt="Settings" width="400"></p>
+<p>If you want to add new recipes, just add new ones to the recipes.json, and the ingredients to ingredients.json they will be populated automatically.</p>
+<h2>How to run the software.</h2>
+<h3>Prerequistes.</h3>
+<h4>For Intel Edison and Intel Galileo</h4>
+<p>If you are using the standard images should work out of the box.</p>
+<h4>For Beaglebone.</h4>
+<p>Get the latest beaglebone debian distribution from</p>
+<p><a href="http://beagleboard.org/latest-images">http://beagleboard.org/latest-images</a></p>
+<p>Install the following dependencies,</p>
+<pre><code>sudo apt-get install git build-essential swig3.0 python-dev nodejs-dev cmake
+Build and Install mraa
+libmraa is not in apt so we’ll have to compile it from source. Don’t worry, it’s easy:
+git clone https://github.com/intel-iot-devkit/mraa.git
+mkdir mraa/build &amp;&amp; cd $_
+cmake .. -DBUILDSWIGNODE=OFF
+make
+make install
+Cd
+</code></pre>
+<pre><code>bash sudo ln -s &lt;your install prefix, e.g. /usr&gt;/lib/python2.7/site-packages/* /usr/lib/python2.7/dist-packages
+</code></pre>
+<p>I am not sure if I got the steps right, but the main reference is this.</p>
+<p><a href="http://iotdk.intel.com/docs/master/mraa/building.html">http://iotdk.intel.com/docs/master/mraa/building.html</a></p>
+<p>And this</p>
+<p><a href="https://learn.sparkfun.com/tutorials/installing-libmraa-on-ubilinux-for-edison">https://learn.sparkfun.com/tutorials/installing-libmraa-on-ubilinux-for-edison</a></p>
+<h4>For Raspberry PI look here.</h4>
+<p><a href="http://www.elec-tron.org/?p=996">http://www.elec-tron.org/?p=996</a></p>
+<p>Once you got libmraa installed. Test using blink.py to check whether your GPIO pins are working properly or not.</p>
+<p>Cd into the somabot repo and do</p>
+<pre><code>pip install flask
+python app.py
+</code></pre>
+<p>This will start your server. Access the web server through the ip address on which you are running.</p>
+
+  </article>
 
   
     
-  <div class="blog-post">
+  <div class="post-header mb2">
   
-    <h2><a href="../blog/ttttt/">ttttt</a></h2>
+    <a class="post-link" href="../blog/set-date-time/"><h3 class="h1 post-title">Set date and time from adb<h3></a>
   
-  <p class="meta">
+  <span class="post-meta">
     written by
     
-      rett
+      Eswar Malla
     
-    on 
-  </p>
-  <p>boomboom</p>
-<p>There is a significant amount of subtle, yet precisely calibrated, styling to ensure
-that your content is emphasized while still looking aesthetically pleasing.</p>
-<p>All links are easy to <a href="../blog/ttttt/#">locate and discern</a>, yet don't detract from the <a href="../blog/ttttt/#">harmony
-of a paragraph</a>. The <em>same</em> goes for italics and <strong>bold</strong> elements. Even the the strikeout
-works if <del>for some reason you need to update your post</del>. For consistency's sake,
-<ins>The same goes for insertions</ins>, of course.</p>
-<h3>Code, with syntax highlighting</h3>
-<p>Here's an example of some ruby code with line anchors.</p>
-<div class="highlight"><pre><span></span><span class="k">print</span> <span class="s2">&quot;Hello World!&quot;</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="c1"># The most awesome of classes</span>
-<span class="k">class</span> <span class="nc">Awesome</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-  <span class="kp">include</span> <span class="no">EvenMoreAwesome</span>
-
-  <span class="n">validates_presence_of</span> <span class="ss">:something</span>
-  <span class="n">validates</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">email_format</span><span class="p">:</span> <span class="kp">true</span>
-
-  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="nb">name</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
-    <span class="nb">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
-    <span class="nb">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="nb">name</span>
-    <span class="nb">self</span><span class="o">.</span><span class="n">favorite_number</span> <span class="o">=</span> <span class="mi">12</span>
-    <span class="nb">puts</span> <span class="s1">&#39;created awesomeness&#39;</span>
-  <span class="k">end</span>
-
-  <span class="k">def</span> <span class="nf">email_format</span>
-    <span class="n">email</span> <span class="o">=~</span> <span class="sr">/\S+@\S+\.\S+/</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-</pre></div>
-<p>Here's some CSS:</p>
-<div class="highlight"><pre><span></span><span class="nc">.foobar</span> <span class="p">{</span>
-  <span class="c">/* Named colors rule */</span>
-  <span class="nb">color</span><span class="o">:</span> <span class="nb">tomato</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-<p>Here's some JavaScript:</p>
-<div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">isPresent</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;is-present&#39;</span><span class="p">)</span>
-
-<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">doStuff</span><span class="p">(</span><span class="nx">things</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">isPresent</span><span class="p">(</span><span class="nx">things</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nx">doOtherStuff</span><span class="p">(</span><span class="nx">things</span><span class="p">)</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-<p>Here's some HTML:</p>
-<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;m0 p0 bg-blue white&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;h1&quot;</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</pre></div>
-<h1>Headings!</h1>
-<p>They're responsive, and well-proportioned (in <code>padding</code>, <code>line-height</code>, <code>margin</code>, and <code>font-size</code>).
-They also heavily rely on the awesome utility, <a href="http://www.basscss.com/">BASSCSS</a>.</p>
-<h5>They draw the perfect amount of attention</h5>
-<p>This allows your content to have the proper informational and contextual hierarchy. Yay.</p>
-<h3>There are lists, too</h3>
-<ul>
-<li>Apples</li>
-<li>Oranges</li>
-<li>Potatoes</li>
-<li><p>Milk</p>
-</li>
-<li><p>Mow the lawn</p>
-</li>
-<li>Feed the dog</li>
-<li>Dance</li>
-</ul>
-<h3>Images look great, too</h3>
-<p><img src="https://cloud.githubusercontent.com/assets/1424573/3378137/abac6d7c-fbe6-11e3-8e09-55745b6a8176.png" alt="desk"></p>
-<p><em><img src="https://cloud.githubusercontent.com/assets/1424573/3378137/abac6d7c-fbe6-11e3-8e09-55745b6a8176.png" alt="desk"></em></p>
-<h3>There are also pretty colors</h3>
-<p>Also the result of <a href="http://www.basscss.com/">BASSCSS</a>, you can <span class="bg-dark-gray white">highlight</span> certain components
-of a <span class="red">post</span> <span class="mid-gray">with</span> <span class="green">CSS</span> <span class="orange">classes</span>.</p>
-<p>I don't recommend using blue, though. It looks like a <span class="blue">link</span>.</p>
-<h3>Footnotes!</h3>
-<p>Markdown footnotes are supported, and they look great! Simply put e.g. <code>[^1]</code> where you want the footnote to appear,[^1] and then add
-the reference at the end of your markdown.</p>
-<h3>Stylish blockquotes included</h3>
-<p>You can use the markdown quote syntax, <code>&gt;</code> for simple quotes.</p>
-<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis porta mauris.</p>
-</blockquote>
-<p>However, you need to inject html if you'd like a citation footer. I will be working on a way to
-hopefully sidestep this inconvenience.</p>
-<blockquote>
-  <p>
-    Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
-  </p>
-  <footer><cite title="Antoine de Saint-Exupéry">Antoine de Saint-Exupéry</cite></footer>
-</blockquote><h3>There's more being added all the time</h3>
-<p>Checkout the <a href="https://github.com/johnotander/pixyll">Github repository</a> to request,
-or add, features.</p>
-<p>Happy writing.</p>
-
+    on 2016-04-18
+    </span>
   </div>
+  <article class="post-content">
+      <pre><code>
+adb shell date -s YYYYMMDD.HHmmss adb shell date -s 20141020.165800
+
+adb shell date -s 20120423.130000 adb shell 'su 0 date -s YYYYMMDD.HHmmss'
+</code></pre>
+
+  </article>
+
+  
+    
+  <div class="post-header mb2">
+  
+    <a class="post-link" href="../blog/android-studio-stuck-on-gradle-resolve-dependancies/"><h3 class="h1 post-title">Android Studio stuck on “Gradle: resolve dependancies&#39;<h3></a>
+  
+  <span class="post-meta">
+    written by
+    
+      Eswar Malla
+    
+    on 2016-04-08
+    </span>
+  </div>
+  <article class="post-content">
+      <ul>
+<li><p>Check all the dependencies, whether they are valid or not.</p>
+</li>
+<li><p>Or for a temporary fix, try offline mode.</p>
+</li>
+</ul>
+<blockquote><p>To enable this setting go to:
+Preferences -&gt; Gradle
+In the right side options go down to "Global Gradle Settings" and check the "Offline work" box.</p>
+</blockquote>
+<ul>
+<li><p>Build from the command line to know the exact source of the problem</p>
+<p>In windows</p>
+<blockquote><p>gradlew.bat assembleDebug</p>
+</blockquote>
+<p>In linux</p>
+</li>
+</ul>
+<blockquote><p>chmod +x gradlew
+./gradlew assembleDebug</p>
+</blockquote>
+<ul>
+<li>If nothing works, You can also try to delete all contents of folder C:\Users\<Username>.gradle</li>
+</ul>
+
+  </article>
 
   
 
@@ -221,8 +219,7 @@ or add, features.</p>
     <div class="measure">
       <small>
           &copy; Copyright 2016 by Eswar Malla.
-        Theme <a href="https://github.com/johnotander/pixyll">Piktor</a>, fork of <a href="https://github.com/johnotander/pixyll">Pixyll</a> &lt;3 by <a href="http://johnotander.com">John Otander</a> 
-        &lt;/&gt; available on .
+        Theme <a href="https://github.com/eswarm/piktor">Piktor</a> by <a href="http://eswarm.in">Eswar Malla</a>, fork of <a href="https://github.com/johnotander/pixyll">Pixyll</a> by <a href="http://johnotander.com">John Otander</a>
       </small>
     </div>
   </footer>
