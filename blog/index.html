@@ -13,7 +13,7 @@
     <link rel="canonical" >
     <!-- Custom CSS -->
 
-    <link rel="stylesheet" href="../static/gen/styles.css?h=950e5d2e">
+    <link rel="stylesheet" href="../static/gen/styles.css?h=30966fac">
     <!--
     <link rel="stylesheet" href="../static/pixyll.css" type="text/css">
     -->
@@ -74,130 +74,92 @@
       <div class="measure">
           <div class="page">
             
+
+  <div class="home">
+    <div class="posts">
   
+  <div class="post py3">
     
   <div class="post-header mb2">
   
-    <a class="post-link" href="../blog/somabot/"><h3 class="h1 post-title">Somabot<h3></a>
+    <a class="post-link" href="../blog/2016/5/somabot/"><h3 class="h1 post-title">Somabot<h3></a>
   
-  <span class="post-meta">
+  <p class="post-meta">
+    <!--
     written by
     
       Eswar Malla
     
-    on 2016-05-04
-    </span>
+    -->
+    <time class="dt-published" datetime="2016-05-04">May 04, 2016</time>
+  </p>
   </div>
   <article class="post-content">
+    
       <p><a href="http://www.youtube.com/watch?feature=player_embedded&v=SUPC4OL6UD4" target="_blank"><img src="http://img.youtube.com/vi/SUPC4OL6UD4/0.jpg" alt="Somabot" width="480" height="360" border="10" /></a></p>
-<p>The hardware interfacing is based on libmraa. You can use this on beaglebone black, Raspberry PI or the intel edison/galileo.</p>
-<p>Just select the ingredients in the settings, and the right recipes are populated for generating your cocktails automatically.</p>
-<p>The control software is a webserver you can access from any browser. Built to be responsive, so you can use it either on your mobile or desktop.</p>
-<p><img src="https://github.com/eswarm/somabot/blob/master/screens/home.png" alt="Home" width="400">
-<img src="https://github.com/eswarm/somabot/blob/master/screens/home2.png" alt="Home" width="400">
-<img src="https://github.com/eswarm/somabot/blob/master/screens/settings.png" alt="Settings" width="400"></p>
-<p>If you want to add new recipes, just add new ones to the recipes.json, and the ingredients to ingredients.json they will be populated automatically.</p>
-<h2>How to run the software.</h2>
-<h3>Prerequistes.</h3>
-<h4>For Intel Edison and Intel Galileo</h4>
-<p>If you are using the standard images should work out of the box.</p>
-<h4>For Beaglebone.</h4>
-<p>Get the latest beaglebone debian distribution from</p>
-<p><a href="http://beagleboard.org/latest-images">http://beagleboard.org/latest-images</a></p>
-<p>Install the following dependencies,</p>
-<pre><code>sudo apt-get install git build-essential swig3.0 python-dev nodejs-dev cmake
-Build and Install mraa
-libmraa is not in apt so we’ll have to compile it from source. Don’t worry, it’s easy:
-git clone https://github.com/intel-iot-devkit/mraa.git
-mkdir mraa/build &amp;&amp; cd $_
-cmake .. -DBUILDSWIGNODE=OFF
-make
-make install
-Cd
-</code></pre>
-<pre><code>bash sudo ln -s &lt;your install prefix, e.g. /usr&gt;/lib/python2.7/site-packages/* /usr/lib/python2.7/dist-packages
-</code></pre>
-<p>I am not sure if I got the steps right, but the main reference is this.</p>
-<p><a href="http://iotdk.intel.com/docs/master/mraa/building.html">http://iotdk.intel.com/docs/master/mraa/building.html</a></p>
-<p>And this</p>
-<p><a href="https://learn.sparkfun.com/tutorials/installing-libmraa-on-ubilinux-for-edison">https://learn.sparkfun.com/tutorials/installing-libmraa-on-ubilinux-for-edison</a></p>
-<h4>For Raspberry PI look here.</h4>
-<p><a href="http://www.elec-tron.org/?p=996">http://www.elec-tron.org/?p=996</a></p>
-<p>Once you got libmraa installed. Test using blink.py to check whether your GPIO pins are working properly or not.</p>
-<p>Cd into the somabot repo and do</p>
-<pre><code>pip install flask
-python app.py
-</code></pre>
-<p>This will start your server. Access the web server through the ip address on which you are running.</p>
 
+      <a class="post-link" href="../blog/2016/5/somabot/">Read more...</a>
+    
   </article>
 
+  </div>
   
+  <div class="post py3">
     
   <div class="post-header mb2">
   
-    <a class="post-link" href="../blog/set-date-time/"><h3 class="h1 post-title">Set date and time from adb<h3></a>
+    <a class="post-link" href="../blog/2016/4/set-date-time/"><h3 class="h1 post-title">Set date and time from adb<h3></a>
   
-  <span class="post-meta">
+  <p class="post-meta">
+    <!--
     written by
     
       Eswar Malla
     
-    on 2016-04-18
-    </span>
+    -->
+    <time class="dt-published" datetime="2016-04-18">Apr 18, 2016</time>
+  </p>
   </div>
   <article class="post-content">
-      <pre><code>
-adb shell date -s YYYYMMDD.HHmmss adb shell date -s 20141020.165800
+    
+      <p>```</p>
 
-adb shell date -s 20120423.130000 adb shell 'su 0 date -s YYYYMMDD.HHmmss'
-</code></pre>
-
+      <a class="post-link" href="../blog/2016/4/set-date-time/">Read more...</a>
+    
   </article>
 
+  </div>
   
+  <div class="post py3">
     
   <div class="post-header mb2">
   
-    <a class="post-link" href="../blog/android-studio-stuck-on-gradle-resolve-dependancies/"><h3 class="h1 post-title">Android Studio stuck on “Gradle: resolve dependancies&#39;<h3></a>
+    <a class="post-link" href="../blog/2016/4/android-studio-stuck-on-gradle-resolve-dependancies/"><h3 class="h1 post-title">Android Studio stuck on “Gradle: resolve dependancies&#39;<h3></a>
   
-  <span class="post-meta">
+  <p class="post-meta">
+    <!--
     written by
     
       Eswar Malla
     
-    on 2016-04-08
-    </span>
+    -->
+    <time class="dt-published" datetime="2016-04-08">Apr 08, 2016</time>
+  </p>
   </div>
   <article class="post-content">
+    
       <ul>
-<li><p>Check all the dependencies, whether they are valid or not.</p>
-</li>
-<li><p>Or for a temporary fix, try offline mode.</p>
-</li>
-</ul>
-<blockquote><p>To enable this setting go to:
-Preferences -&gt; Gradle
-In the right side options go down to "Global Gradle Settings" and check the "Offline work" box.</p>
-</blockquote>
-<ul>
-<li><p>Build from the command line to know the exact source of the problem</p>
-<p>In windows</p>
-<blockquote><p>gradlew.bat assembleDebug</p>
-</blockquote>
-<p>In linux</p>
-</li>
-</ul>
-<blockquote><p>chmod +x gradlew
-./gradlew assembleDebug</p>
-</blockquote>
-<ul>
-<li>If nothing works, You can also try to delete all contents of folder C:\Users\<Username>.gradle</li>
+<li>Check all the dependencies, whether they are valid or not.</li>
 </ul>
 
+      <a class="post-link" href="../blog/2016/4/android-studio-stuck-on-gradle-resolve-dependancies/">Read more...</a>
+    
   </article>
 
+  </div>
   
+      </div>
+  </div>
 
   
   <div class="pagination">
@@ -209,6 +171,7 @@ In the right side options go down to "Global Gradle Settings" and check the "Off
       <span class="disabled">Next &raquo;</span>
     
   </div>
+
 
 
           </div>

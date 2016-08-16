@@ -13,12 +13,12 @@
     <link rel="canonical" >
     <!-- Custom CSS -->
 
-    <link rel="stylesheet" href="../../static/gen/styles.css?h=30966fac">
+    <link rel="stylesheet" href="../../../../static/gen/styles.css?h=30966fac">
     <!--
-    <link rel="stylesheet" href="../../static/pixyll.css" type="text/css">
+    <link rel="stylesheet" href="../../../../static/pixyll.css" type="text/css">
     -->
-    <script type=text/javascript src="../../static/gen/app.js?h=56f85b4f" charset="utf-8"></script>
-    <link rel="stylesheet" href="../../static/pygments.css">
+    <script type=text/javascript src="../../../../static/gen/app.js?h=56f85b4f" charset="utf-8"></script>
+    <link rel="stylesheet" href="../../../../static/pygments.css">
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
@@ -56,13 +56,13 @@
           <div class="measure">
             <a href="" class="site-title"></a>
             <nav class="site-nav">
-                  <a href="../../">Home</a>
+                  <a href="../../../../">Home</a>
                   
-                     <a href="../../blog/">Blog</a>
+                     <a href="../../../../blog/">Blog</a>
                   
-                    <a href="../../projects/">Projects</a>
+                    <a href="../../../../projects/">Projects</a>
                   
-                    <a href="../../about/">About</a>
+                    <a href="../../../../about/">About</a>
                   
             </nav>
             <div class="clearfix"></div>
@@ -79,21 +79,25 @@
   
     <h1>Set date and time from adb</h1>
   
-  <span class="post-meta">
+  <p class="post-meta">
+    <!--
     written by
     
       Eswar Malla
     
-    on 2016-04-18
-    </span>
+    -->
+    <time class="dt-published" datetime="2016-04-18">Apr 18, 2016</time>
+  </p>
   </div>
   <article class="post-content">
+    
       <pre><code>
 adb shell date -s YYYYMMDD.HHmmss adb shell date -s 20141020.165800
 
 adb shell date -s 20120423.130000 adb shell 'su 0 date -s YYYYMMDD.HHmmss'
 </code></pre>
 
+    
   </article>
 
 

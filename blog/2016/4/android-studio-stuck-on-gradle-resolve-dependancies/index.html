@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Set date and time from adb — blog</title>
+    <title>Android Studio stuck on “Gradle: resolve dependancies&#39; — blog</title>
     <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
     <link rel="dns-prefetch" href="//cdn.mathjax.org">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
@@ -13,12 +13,12 @@
     <link rel="canonical" >
     <!-- Custom CSS -->
 
-    <link rel="stylesheet" href="../../static/gen/styles.css?h=30966fac">
+    <link rel="stylesheet" href="../../../../static/gen/styles.css?h=30966fac">
     <!--
-    <link rel="stylesheet" href="../../static/pixyll.css" type="text/css">
+    <link rel="stylesheet" href="../../../../static/pixyll.css" type="text/css">
     -->
-    <script type=text/javascript src="../../static/gen/app.js?h=56f85b4f" charset="utf-8"></script>
-    <link rel="stylesheet" href="../../static/pygments.css">
+    <script type=text/javascript src="../../../../static/gen/app.js?h=56f85b4f" charset="utf-8"></script>
+    <link rel="stylesheet" href="../../../../static/pygments.css">
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
@@ -56,13 +56,13 @@
           <div class="measure">
             <a href="" class="site-title"></a>
             <nav class="site-nav">
-                  <a href="../../">Home</a>
+                  <a href="../../../../">Home</a>
                   
-                     <a href="../../blog/">Blog</a>
+                     <a href="../../../../blog/">Blog</a>
                   
-                    <a href="../../projects/">Projects</a>
+                    <a href="../../../../projects/">Projects</a>
                   
-                    <a href="../../about/">About</a>
+                    <a href="../../../../about/">About</a>
                   
             </nav>
             <div class="clearfix"></div>
@@ -77,23 +77,46 @@
   
   <div class="post-header mb2">
   
-    <h1>Set date and time from adb</h1>
+    <h1>Android Studio stuck on “Gradle: resolve dependancies&#39;</h1>
   
-  <span class="post-meta">
+  <p class="post-meta">
+    <!--
     written by
     
       Eswar Malla
     
-    on 2016-04-18
-    </span>
+    -->
+    <time class="dt-published" datetime="2016-04-08">Apr 08, 2016</time>
+  </p>
   </div>
   <article class="post-content">
-      <pre><code>
-adb shell date -s YYYYMMDD.HHmmss adb shell date -s 20141020.165800
+    
+      <ul>
+<li><p>Check all the dependencies, whether they are valid or not.</p>
+</li>
+<li><p>Or for a temporary fix, try offline mode.</p>
+</li>
+</ul>
+<blockquote><p>To enable this setting go to:
+Preferences -&gt; Gradle
+In the right side options go down to "Global Gradle Settings" and check the "Offline work" box.</p>
+</blockquote>
+<ul>
+<li><p>Build from the command line to know the exact source of the problem</p>
+<p>In windows</p>
+<blockquote><p>gradlew.bat assembleDebug</p>
+</blockquote>
+<p>In linux</p>
+</li>
+</ul>
+<blockquote><p>chmod +x gradlew
+./gradlew assembleDebug</p>
+</blockquote>
+<ul>
+<li>If nothing works, You can also try to delete all contents of folder C:\Users\<Username>.gradle</li>
+</ul>
 
-adb shell date -s 20120423.130000 adb shell 'su 0 date -s YYYYMMDD.HHmmss'
-</code></pre>
-
+    
   </article>
 
 
