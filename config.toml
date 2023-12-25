@@ -1,0 +1,10 @@
+baseURL = "http://example.org/"
+disablePathToLower = true
+languageCode = "en-us"
+title = "Hi, I am Eswar Malla."
+theme = 'PaperMod'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
