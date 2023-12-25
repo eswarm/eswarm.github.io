@@ -20,6 +20,3 @@ You can reach me on
 [Github](http://github.com/eswarm/)
 
 [Linked In](https://in.linkedin.com/in/eswarm)
-
-[Google Plus](https://plus.google.com/102630360601349400454)
-
