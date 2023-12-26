@@ -1,0 +1,51 @@
+baseURL: 'https://eswarm.in'
+disablePathToLower: true
+languageCode: en-us
+title: "Eswar's Blog"
+theme: PaperMod
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: About
+          url: /about
+          weight: 5
+        - name: Projects
+          url: /projects
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+
+params:
+    ShowShareButtons: true
+    ShowReadingTime: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    defaultTheme: auto 
+    homeInfoParams:
+        Title: Hi. I am Eswar Malla.
+        Content: 
+
+    socialIcons: # optional
+        - name: github
+          url: "https://github.com/eswarm/"
+        - name: LinkedIn
+          url: "https://www.linkedin.com/in/eswarm/"
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
